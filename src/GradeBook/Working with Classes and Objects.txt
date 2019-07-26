@@ -1,0 +1,11 @@
+****Creating a Class****
+--> When do you know to create a new class?
+    --> When there's a method with too many lines of code in it
+    --> When the code becomes too complex
+--> You can have "." in namespaces
+    --> e.x., Gradebook.somethiing
+****
+
+****
+
+****
