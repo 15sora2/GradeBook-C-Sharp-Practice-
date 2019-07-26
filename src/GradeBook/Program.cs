@@ -7,21 +7,11 @@ namespace GradeBook
     {
         static void Main(string[] args){
 
-            var grades = new List<double>() {12.7, 12.7, 12.7};
-            grades.Add(12.1);
-
-            var book = new Book();
+            var book = new Book("Shamund's Grade Book");
             book.AddGrade(89.1);
-            
-            var result = 0.0;
-            foreach(double number in grades){
-                result += number;
-            }
-
-            result /= grades.Count;
-
-            Console.WriteLine($"The average grade is {result:N1}");
-            //N1 is a format specifier that prints the result through 1 place after the decimal
+            book.AddGrade(90.5);
+            book.AddGrade(77.5);
+            book.showStatistics();    
         }
     }
 }

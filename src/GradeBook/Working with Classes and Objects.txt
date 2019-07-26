@@ -3,9 +3,26 @@
     --> When there's a method with too many lines of code in it
     --> When the code becomes too complex
 --> You can have "." in namespaces
-    --> e.x., Gradebook.somethiing
-****
+    --> e.x., Gradebook.something
 
-****
 
-****
+****Defining a Field****
+--> A field looks like a variable definition in a class.
+
+****Adding a Constructor****
+-->Public and Private are access modifiers
+-->No Access modifier and privateoperate the same way
+-->Public allows that piece of code to be accessed
+     and manipulated by code outside of that class
+     --> We don't want this to be the case, especially
+            in Object-Oriented Programming, where we 
+            are storing data in some way. We don't want illegal
+            values in our data (i.e., a grade of 101 being entered in
+            a gradebook that should only hold values 0-100)
+--> "this" keyword is an implicit variable commonly used in 
+        methods and constructors
+
+****Working with Static Members****
+-->What does it mean for class member to be static?
+-->A class memeber that doesn't use "static" is an "instance member" 
+    or "instance method"
