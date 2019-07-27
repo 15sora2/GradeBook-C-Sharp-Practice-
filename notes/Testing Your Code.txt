@@ -1,0 +1,51 @@
+****The Many Benefits of Unit Testing****
+--> Verify behavior of code
+--> Investigate what would make the code go wrong and where
+--> Testing small units/portions of code
+--> Automate testing so we don't run the code each time
+         to check functionality
+
+****Creating A Unit Test Project****
+-->Create a test folder
+-->dotnet new xunit
+-->xUnit comes from NuGet
+
+****Writting and Running A Test****
+-->[Fact]
+    -->An Attribute
+    -->A piece of data that is attached to the Test method
+-->Can run tests from the command line using dotnet test
+-->Test Runner
+
+****Referencing Projects and Packages****
+-->
+
+
+
+using System;
+using Xunit;
+
+namespace GradeBook.Tests
+{
+    public class BookTests
+    {
+        [Fact]
+        //An attribute
+        public void Test1()
+        {
+            //arrange
+            var book = new Book("");
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            book.AddGrade(77.3);
+
+            //act
+            var result = book.GetStatistics();
+            
+            //assert
+            Assert.Equal(85.6, result.Average);
+            Assert.Equal(90.5, result.High);
+            Assert.Equal(77.3, result.Low);
+        }
+    }
+}
