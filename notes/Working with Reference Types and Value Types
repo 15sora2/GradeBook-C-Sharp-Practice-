@@ -11,3 +11,24 @@ The value of x is stored in the variable x
 -->dotnet sln add [path to desired files]
 
 ****Testing Object References****
+
+****Referencing Different Objects****
+-->Variables can reference the same object
+
+****Passing Parameters By Value****
+
+****Returning Object References****
+
+****Passing Parameters By Reference****
+-->We don't see nor use "ref" keyword that often
+
+****Working with Value Types****
+
+****Value Type Parameters****
+
+****Looking For Reference Types And Value Types****
+-->Reference Type: 
+    --> Something defined by a class or struct (mostly work with classes)
+    -->
+
+****Taking Advantage of Garbage Collection****
