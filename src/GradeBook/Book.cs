@@ -4,13 +4,14 @@ using System.Collections.Generic;
 namespace GradeBook{
 
     public class Book{
+
         private List<double> grades;
-        private string name;
+        public string Name;
         //These are fields, not a variables
 
         public Book(string name){
             grades = new List<double>();
-            this.name = name;
+            Name = name;
         }
 
         public void AddGrade(double grade){

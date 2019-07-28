@@ -1,0 +1,13 @@
+****Reference Types and Value Types****
+-->Reference Type
+var b = new Book("grades");
+Memory is allocated for this variable b. b is pointing to,
+     or referencing, the place that the object is located
+-->Value Type
+The value of x is stored in the variable x
+
+****Creating A Solution File****
+-->dotnet new sln
+-->dotnet sln add [path to desired files]
+
+****Testing Object References****
