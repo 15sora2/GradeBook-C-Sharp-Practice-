@@ -18,7 +18,7 @@ namespace GradeBook
             //N1 is a format specifier that prints the result through 1 place after the decimal
             Console.WriteLine($"The lowest grade is {stats.Low:N1}");
             Console.WriteLine($"The highest grade is {stats.High:N1}");
-
+            Console.WriteLine($"The letter grade is {stats.Letter}");
         }
     }
 }

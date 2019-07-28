@@ -3,3 +3,9 @@
 ****Looping with for, foreach, do, and while****
 
 ****Jumping With break and continue****
+-->break can be used to break out of code, or jumping over code and 
+not executing what was jumped over.
+
+****Switching with the switch Statement****
+
+****Pattern Matching with Switch****
