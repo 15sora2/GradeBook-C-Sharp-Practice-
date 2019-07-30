@@ -1,0 +1,70 @@
+****The Pillars Of OOP****
+-->Encapsulation
+    -->Hide details about our code
+    -->Apply everyday with every kind of code we make
+    -->Key to good software design
+-->Inheritance
+-->Polymorphism
+    --> The chaning behavior of a code's implementation
+    --> In some sense, it's a form of encapsulation
+
+****Deriving From A Base Class****
+-->DRY Principle: "Don't Repeat Yourself"
+--> Inheritance
+    public void Book : NamedObject
+        -->Book inherits NamedObject
+
+****Chaining Constructors****
+        public Book(string name) : base(name)   
+        {
+           //....
+        }
+
+****Deriving from System.Object****
+-->in .NET, every class has a base class
+--> No limit to high high the inheritance heiarchy can go. However, 
+    in practice we don't layer it too high to prevent code from
+    becoming too complicated to follow
+
+****Setting Up A Scenario****
+-->Highlight code and hit the lightbulp on the left side to "Extract Method"
+    --> This analyzes the method and places it in a new method
+
+****Defining An Abstract Class****
+-->An abstract method tells the compiler that we want the class ot have the given member but
+    don't yet know what we want it to do
+public abstract class BookBase{
+        public abstract void AddGrade(double grade);
+    }
+-->There will be times where you might have to override an abstract method
+    that you receive from a base class
+        public override void AddGrade(double grade){
+            // ....
+        }
+
+****Defining An Interface****
+-->Looks like a Class definition, but is pure. It has no 
+    implementation details.
+
+public interface IBook{
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get; }
+        event GradeAddedDelegate GradeAdded;
+    }
+    public class InMemoryBook : Book, IBook{
+        // ...
+    } //or...
+
+    public abstract class Book : NamedObject, IBook{
+        //...must implement functions (cursor on interface (IBook)
+            then ctrl+period)
+    }
+-->virtual keyword
+
+****Writing Grades to a File****
+
+
+****Using IDisposable****
+writeFile.Dispose();
+
