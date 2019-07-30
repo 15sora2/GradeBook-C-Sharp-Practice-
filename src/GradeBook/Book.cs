@@ -3,14 +3,25 @@ using System.Collections.Generic;
 
 namespace GradeBook{
 
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
     public class Book{
 
         private List<double> grades;
-        public string Name;
+
+        public string Name{
+            get; 
+            set;
+            //auto-property
+        }
+        //public string name;
         //These are fields, not a variables
+
+        const string category = "Science";
 
         public Book(string name){
             grades = new List<double>();
+            //category = "";
             Name = name;
         }
 
@@ -45,6 +56,10 @@ namespace GradeBook{
             if(grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+
+                if(GradeAdded != null){
+                    GradeAdded(this, new EventArgs());
+                }
             }
             else
             {
@@ -52,6 +67,7 @@ namespace GradeBook{
             }
         }
 
+        public event GradeAddedDelegate GradeAdded;
         public Statistics GetStatistics()
         {
             var result = new Statistics();

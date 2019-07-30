@@ -1,0 +1,68 @@
+****Overloading Methods****
+--> Method Signature: Method Name(Perameters)
+--> Can have Method Signatures with the same name but different parameters
+
+****Defining Properties****
+ public string Name{
+            get{
+                return name;
+            }
+            set{
+                if(!String.IsNullOrEmpty(value)){
+                    name = value;
+                //value will be whatever someone is sending as the value
+                }
+                
+            }
+
+****Defining Property Getters and Setters****
+
+****Defining readonly Members****
+
+****Defining const Members****
+--> common to see const variable names in all UPPER_CASE
+    --> const string CATEGORY = "Science"
+--> Treated as static members of a class
+    -->Accessed by using the type name
+
+****Introducing Events and Delegates****
+-->Events
+    -->Not in style with server frameworks (don't see them much)
+    -->Hard to understand
+    --> Popular in forms and desktop programming
+    --> Events build on top of delegates
+
+****Defining a Delegate****
+-->Builds and defines a new type for .NET
+-->Defines a variable that can point to and execute a method.
+    -->The method has to have a certain shape/structure
+    -->In a way, a delegate defines what the method must return, 
+    the parameters, etc.
+
+    public delegate string WriteLogDelegate(string logMessage);
+
+    public class TypeTests
+    {
+
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod(){
+            WriteLogDelegate log;
+
+            log = ReturnMessage;
+
+            var result = log("Hello");
+            Assert.Equal("Hello", result);
+        }
+
+        string ReturnMessage(string message){
+            return message;
+        }
+
+****Using Multi-Cast Delegates****
+-->Delgates can envoe multiple methods
+
+****Defining an Event****
+--> "event" keyword
+
+****Subscribing to an event****
+-->Definitely study Delegates and Events

@@ -30,7 +30,7 @@ namespace GradeBook.Tests
             var book = new Book("This Book");
             book.AddGrade(90);
             book.AddGrade(73.7);
-            book.AddGrade(102);
+            //book.AddGrade(102);
 
             var result = book.GetStatistics();
             
