@@ -9,14 +9,11 @@ namespace GradeBook
 
     public class NamedObject
     {
+
+        public string Name { get; set; }
         public NamedObject(string name)
         {
             Name = name;
-        }
-
-        public string Name
-        {
-            get; set;
         }
     }
 
@@ -52,7 +49,7 @@ namespace GradeBook
 
         public override Statistics GetStatistics()
         {
-              var result = new Statistics();
+            var result = new Statistics();
 
             using(var reader = File.OpenText($"{Name}.txt")){
                 var line = reader.ReadLine();
@@ -86,16 +83,6 @@ namespace GradeBook
 
         private List<double> grades;
 
-        /* 
-            public string Name{
-                get; 
-                set;
-                //auto-property
-            }
-            */
-        //public string name;
-        //These are fields, not a variables
-
         const string category = "Science";
 
         //Base accesses the constructor in NamedObject
@@ -103,7 +90,6 @@ namespace GradeBook
 
         {
             grades = new List<double>();
-            //category = "";
             Name = name;
         }
 
